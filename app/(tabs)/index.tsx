@@ -8,6 +8,8 @@ import ExpenseBlock from '@/components/ExpenseBlock';
 import ExpenseList from '@/data/expenses.json'
 import IncomeBlock from '@/components/IncomeBlock';
 import IncomeList from '@/data/income.json'
+import SpendingBlock from '@/components/SpendingBlock';
+import SpendingList from '@/data/spending.json'
 
 export default function Page() {
 
@@ -35,7 +37,10 @@ export default function Page() {
                             <Text style={[styles.headerText, { marginTop: 20 }]}>My <Text style={styles.textBold}>Income</Text></Text>
                             <IncomeBlock incomeList={IncomeList} />
                         </View>
-
+                        <View>
+                            <Text style={[styles.headerText, { marginTop: 20 }]}>July <Text style={styles.textBold}>Spending</Text></Text>
+                            <SpendingBlock spendingList={SpendingList} />
+                        </View>
                     </View>
                 </ScrollView>
             </View>
