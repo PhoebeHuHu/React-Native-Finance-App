@@ -6,6 +6,8 @@ import Header from '@/components/Header';
 import HomePageChart from '@/components/HomePageChart';
 import ExpenseBlock from '@/components/ExpenseBlock';
 import ExpenseList from '@/data/expenses.json'
+import IncomeBlock from '@/components/IncomeBlock';
+import IncomeList from '@/data/income.json'
 
 export default function Page() {
 
@@ -27,9 +29,13 @@ export default function Page() {
                                 <HomePageChart />
                             </View>
                         </View>
-                        <View style={styles.expenseBlock}>
-                            <ExpenseBlock expenseList={ExpenseList} />
+
+                        <ExpenseBlock expenseList={ExpenseList} />
+                        <View>
+                            <Text style={[styles.headerText, { marginTop: 20 }]}>My <Text style={styles.textBold}>Income</Text></Text>
+                            <IncomeBlock incomeList={IncomeList} />
                         </View>
+
                     </View>
                 </ScrollView>
             </View>
